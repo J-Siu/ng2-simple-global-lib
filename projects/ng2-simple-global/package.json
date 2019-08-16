@@ -1,0 +1,30 @@
+{
+  "name": "ng2-simple-global",
+  "version": "8.2.0",
+  "peerDependencies": {
+    "@angular/common": "^8.2.0",
+    "@angular/core": "^8.2.0"
+	},
+	"description": "Angular simple global variable service",
+  "license": "MIT",
+  "author": {
+    "name": "John, Sing Dao, Siu",
+    "url": "https://github.com/J-Siu"
+  },
+  "keywords": [
+    "angular",
+    "component",
+    "example",
+    "global",
+    "ng",
+    "ng2",
+    "simple"
+  ],
+  "bugs": {
+    "url": "https://github.com/J-Siu/ng2-simple-global-lib/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/J-Siu/ng2-simple-global-lib.git"
+  }
+}
