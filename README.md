@@ -4,7 +4,7 @@ A simple global variable service for Angular.
 
 > To enable faster update, ng2-simple-global switched to Angular CLI starting 8.2.0 and use new repository https://github.com/J-Siu/ng2-simple-global-lib/
 >
-> Project contains both library and example.
+> This repository contains both library and example.
 >
 > All version < 8.2.0 are in old repository https://github.com/J-Siu/ng2-simple-global/
 
@@ -38,7 +38,7 @@ Add `SimpleGlobal` into module providers.
 import { SimpleGlobal } from 'ng2-simple-global';
 
 @NgModule({
-	providers: [SimpleGlobal]
+  providers: [SimpleGlobal]
 })
 ```
 
@@ -49,7 +49,7 @@ import {SimpleGlobal} from 'ng2-simple-global';
 
 export class ChildComponent {
 
-	constructor(private sg: SimpleGlobal) { }
+  constructor(private sg: SimpleGlobal) { }
 
 }
 ```
@@ -60,21 +60,21 @@ export class ChildComponent {
 import {SimpleGlobal} from 'ng2-simple-global';
 
 @Component({
-	selector: 'child-com',
-	template: `
-		<p>This is a global variable: {{sg.gv}}</p>
-		<input type="text" [(ngModel)]="sg.gv">
-	`
+  selector: 'child-com',
+  template: `
+    <p>This is a global variable: {{sg.gv}}</p>
+    <input type="text" [(ngModel)]="sg.gv">
+    `
 })
 export class ChildComponent {
 
-	localVar;
+  localVar;
 
-	constructor(private sg: SimpleGlobal) {
-		if (this.sg['gv']) {
-			this.localVar = this.sg['gv'];
-		}
-	}
+  constructor(private sg: SimpleGlobal) {
+    if (this.sg['gv']) {
+      this.localVar = this.sg['gv'];
+    }
+  }
 
 }
 ```
@@ -99,8 +99,7 @@ ng serve --open
 
 ## Contributors
 
-* [John Sing Dao Siu](https://github.com/J-Siu)
-
+- [John Sing Dao Siu](https://github.com/J-Siu)
 
 ## Changelog
 
@@ -121,6 +120,7 @@ ng serve --open
 - 1.2.5
   - Update to support Angular 4.3.1. Please use previous version for Angular 2.x.x.
 - 8.2.0
+  - Support Angular 8.2.0
   - Switch to Angular Cli for faster future update.
   - Include example in project
 
@@ -128,7 +128,7 @@ ng serve --open
 
 The MIT License
 
-Copyright (c) 2017
+Copyright (c) 2019
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
