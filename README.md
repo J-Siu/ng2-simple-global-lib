@@ -1,7 +1,7 @@
-`ng2-simple-global` a simple global variable service for Angular.
+A global variable service for Angular.
 <!--more-->
 
-> To enable faster update, ng2-simple-global uses Angular CLI starting 8.2.0 and new repository https://github.com/J-Siu/ng2-simple-global-lib/ . Repository contains both library and example.
+> __ng2-simple-global__ uses Angular CLI starting 8.2.0. New repository https://github.com/J-Siu/ng2-simple-global-lib/ contains both library and example.
 >
 > Version < 8.2.0 are in old repository https://github.com/J-Siu/ng2-simple-global/
 
@@ -123,6 +123,8 @@ ng serve --open
   - Support Angular 8.2.0
   - Switch to Angular Cli for faster update.
   - Include example
+- 8.2.1
+  - README.md clean up
 
 ### License
 
