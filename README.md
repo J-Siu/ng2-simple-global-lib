@@ -1,91 +1,87 @@
-# ng2-simple-global
+`ng2-simple-global` a simple global variable service for Angular.
+<!--more-->
 
-A simple global variable service for Angular.
-
-> To enable faster update, ng2-simple-global switched to Angular CLI starting 8.2.0 and use new repository https://github.com/J-Siu/ng2-simple-global-lib/
+> To enable faster update, ng2-simple-global uses Angular CLI starting 8.2.0 and new repository https://github.com/J-Siu/ng2-simple-global-lib/ . Repository contains both library and example.
 >
-> This repository contains both library and example.
->
-> All version < 8.2.0 are in old repository https://github.com/J-Siu/ng2-simple-global/
+> Version < 8.2.0 are in old repository https://github.com/J-Siu/ng2-simple-global/
 
-## Index
+<!-- TOC -->
 
 - [Install](#install)
 - [Usage](#usage)
-- [Repository](#Repository)
+  - [Module](#module)
+  - [Component](#component)
+- [API](#api)
 - [Example](#example)
+- [Repository](#repository)
 - [Contributors](#contributors)
 - [Changelog](#changelog)
 - [License](#license)
 
-## Install
+<!-- /TOC -->
+
+### Install
 
 ```sh
 npm install ng2-simple-global
 ```
 
-## Usage
+### Usage
 
-### Import into Angular 2 application (typescript)
+`ng2-simple-global` is implemented as Angular injectable service name **SimpleGlobal**.
 
-`ng2-simple-global` is implemented as Angular 2 injectable service name __SimpleGlobal__.
-
-__For module using SimpleGlobal__
+#### Module
 
 Add `SimpleGlobal` into module providers.
 
-```javascript
+```ts
 import { SimpleGlobal } from 'ng2-simple-global';
 
 @NgModule({
-  providers: [SimpleGlobal]
+    providers: [SimpleGlobal]
 })
 ```
 
-__For each child component using SimpleGlobal__
+#### Component
 
-```javascript
+```ts
 import {SimpleGlobal} from 'ng2-simple-global';
 
 export class ChildComponent {
 
-  constructor(private sg: SimpleGlobal) { }
+    constructor(private sg: SimpleGlobal) { }
 
 }
 ```
 
 ### API
 
-```javascript
+```ts
 import {SimpleGlobal} from 'ng2-simple-global';
 
 @Component({
-  selector: 'child-com',
-  template: `
-    <p>This is a global variable: {{sg.gv}}</p>
-    <input type="text" [(ngModel)]="sg.gv">
+    selector: 'child-com',
+    template: `
+        <p>This is a global variable: {{sg.gv}}</p>
+        <input type="text" [(ngModel)]="sg.gv">
     `
 })
 export class ChildComponent {
 
-  localVar;
+    localVar;
 
-  constructor(private sg: SimpleGlobal) {
-    if (this.sg['gv']) {
-      this.localVar = this.sg['gv'];
+    constructor(private sg: SimpleGlobal) {
+        if (this.sg['gv']) {
+            this.localVar = this.sg['gv'];
+        }
     }
-  }
 
 }
 ```
 
 Treat `SimpleGlobal` instance as a global object and create/assign additional attributes freely, and it will be accessible to all component using the service.
 
-## Repository
-
-[ng2-simple-global-lib](https://github.com/J-Siu/ng2-simple-global-lib)
-
-## Example
+### Example
 
 You will need Angular CLI to build the library and run the example.
 
@@ -97,11 +93,15 @@ ng build ng2-simple-global
 ng serve --open
 ```
 
-## Contributors
+### Repository
+
+- [ng2-simple-global-lib](https://github.com/J-Siu/ng2-simple-global-lib)
+
+### Contributors
 
 - [John Sing Dao Siu](https://github.com/J-Siu)
 
-## Changelog
+### Changelog
 
 - 1.2.0
   - Support Angular ^2.0.0
@@ -121,10 +121,10 @@ ng serve --open
   - Update to support Angular 4.3.1. Please use previous version for Angular 2.x.x.
 - 8.2.0
   - Support Angular 8.2.0
-  - Switch to Angular Cli for faster future update.
-  - Include example in project
+  - Switch to Angular Cli for faster update.
+  - Include example
 
-## License
+### License
 
 The MIT License
 
