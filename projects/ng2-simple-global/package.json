@@ -1,9 +1,9 @@
 {
   "name": "ng2-simple-global",
-  "version": "8.2.1",
+  "version": "9.1.0",
   "peerDependencies": {
-    "@angular/common": "^8.2.0",
-    "@angular/core": "^8.2.0"
+    "@angular/common": "~9.1.0",
+    "@angular/core": "~9.1.0"
 	},
 	"description": "Angular simple global variable service",
   "license": "MIT",

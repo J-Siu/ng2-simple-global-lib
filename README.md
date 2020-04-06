@@ -125,6 +125,8 @@ ng serve --open
   - Include example
 - 8.2.1
   - README.md clean up
+- 9.1.0
+  - Support Angular 9.1.0
 
 ### License
 
