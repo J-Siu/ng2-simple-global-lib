@@ -1,3 +1,5 @@
+# Angular Simple Global [![Paypal donate](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/donate/?business=HZF49NM9D35SJ&no_recurring=0&currency_code=CAD)
+
 A global variable service for Angular.
 <!--more-->
 
@@ -5,6 +7,7 @@ A global variable service for Angular.
 >
 > Version < 8.2.0 are in old repository [github.com/J-Siu/ng2-simple-global](//github.com/J-Siu/ng2-simple-global/)
 
+### Table Of Content
 <!-- TOC -->
 
 - [Install](#install)
